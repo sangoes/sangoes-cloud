@@ -5,6 +5,14 @@ sangoes-cloud致力于分布式Cloud的基础框架,由spring-boot2.x和spring-c
 
 # 2.相关技术
    
+   - jdk 1.8
+   - 版本流程控制 git-flow
+   - spring-boot 2.0.8.RELEASE
+   - spring-cloud Finchley.SR2
+   - spring-platform Cairo-SR5
+   - maven.compiler 1.8
+   - hutool 4.4.3
+   - mybatis-plus 3.0.6
    
 # 3.功能列表
 
