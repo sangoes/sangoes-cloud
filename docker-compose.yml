@@ -1,0 +1,25 @@
+version: '2'
+services:
+  # mysql数据库
+  mysql:
+    build:
+      context: ./
+      dockerfile: ./conf/mysql/Dockerfile
+    environment:
+      MYSQL_ROOT_PASSWORD: Sangoes123456
+    restart: always
+    container_name: mysql
+    image: mysql
+    ports:
+    - 3306:3306
+  # 注册中心
+  discovery:
+    build:
+      context: ./
+      dockerfile: ./discovery/Dockerfile
+    restart: always
+    ports:
+    - 6121:6121
+    container_name: discovery
+    hostname: discovery
+    image: discovery
