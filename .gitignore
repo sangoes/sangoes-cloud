@@ -24,3 +24,4 @@ hs_err_pid*
 /.idea/
 /sangoes-cloud.iml
 /discovery/discovery.iml
+/config/config.iml
