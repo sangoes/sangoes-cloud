@@ -19,10 +19,10 @@ gem
 Thumbs.db
 
 # Maven files
-target/
+#target/
 
 #projects
-logs
+#logs/
 
 # jar
 .jar
