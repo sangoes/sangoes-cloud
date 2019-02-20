@@ -23,16 +23,30 @@ sangoes-cloud致力于分布式Cloud的基础框架,由spring-boot2.x和spring-c
         |
         conf #相关配置
             |
-            mysql #dockerfile和初始化数据库            
+            mysql #dockerfile和初始化数据库
         |
-        discovery #注册中心 6121   
+        common #工具中心
+            |
+            common-core #工具核心           
+        |
+        discovery #注册中心 6121
+        |
+        config #配置中心 6221
+        |
+        codegen #代码生成中心
+        |
+        gateway #网关中心
+        |
+        auth #认证中心
+        |
+        upms #用户权限模块   
 
 # 5.待做
-
+  - 构建工程和模块
 # 6.问题(bug)
 
 # 7.感谢(Thanks)
 
 # 8.版本更新
-
+  - v1.0 2019年2月17日
 # 9.捐赠(Donate)
