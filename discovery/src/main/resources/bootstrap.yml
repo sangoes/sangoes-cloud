@@ -7,6 +7,12 @@ spring:
   # 环境配置 dev开发环境 prod生产环境
   profiles:
     active: dev
+# 方式公开所有端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 ---
 server:
   port: 6121
@@ -29,7 +35,7 @@ eureka:
     fetch-registry: false
     register-with-eureka: false
     serviceUrl:
-      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://sangoes:Sangoes123456@${eureka.instance.hostname}:${server.port}/eureka/
   # 配置属性，但由于 Eureka 自我保护模式以及心跳周期长的原因，经常会遇到 Eureka Server 不剔除已关停的节点的问题
   server:
     eviction-interval-timer-in-ms: 4000
@@ -53,7 +59,7 @@ eureka:
     fetch-registry: false
     register-with-eureka: false
     serviceUrl:
-      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://sangoes:Sangoes123456@${eureka.instance.hostname}:${server.port}/eureka/
   # 配置属性，但由于 Eureka 自我保护模式以及心跳周期长的原因，经常会遇到 Eureka Server 不剔除已关停的节点的问题
   server:
     eviction-interval-timer-in-ms: 4000

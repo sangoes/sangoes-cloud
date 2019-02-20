@@ -1,0 +1,54 @@
+# 配置中心配置
+
+spring:
+  # 应用名称
+  application:
+    name: config
+  # 环境配置 native开发环境 git生产环境
+  profiles:
+    active: native
+# 方式公开所有端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+---
+server:
+  port: 6221
+spring:
+  profiles: native
+  # 配置中心
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config/
+
+# 注册中心配置
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://sangoes:Sangoes123456@localhost:6121/eureka/
+---
+server:
+  port: 6221
+spring:
+  profiles: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/sangoes/sangoes-cloud-config
+          username:
+          password:
+          default-label: master
+# 注册中心配置
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://sangoes:Sangoes123456@discovery:6121/eureka/
