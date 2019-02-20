@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.sangoes.common.core.config.GlobalExceptionHandler,\
+  com.sangoes.common.core.utils.redis.RedisUtil,\
+  com.sangoes.common.core.config.ControllerConfig,\
+  com.sangoes.common.core.config.RedisConfig,\
+  com.sangoes.common.core.config.RestTemplateConfig

@@ -16,6 +16,11 @@
     <modules>
         <module>discovery</module>
         <module>config</module>
+        <module>common</module>
+        <module>gateway</module>
+        <module>upms</module>
+        <module>auth</module>
+        <module>codegen</module>
     </modules>
 
     <!--properties-->
