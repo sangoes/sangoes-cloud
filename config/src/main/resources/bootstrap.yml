@@ -31,7 +31,7 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://sangoes:Sangoes123456@localhost:6121/eureka/
+      defaultZone: http://sangoes:Sangoes123456@discovery:6121/eureka/
 ---
 server:
   port: 6221

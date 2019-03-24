@@ -1,0 +1,13 @@
+# 数据源
+spring:
+  datasource:
+    # 数据源
+    type: com.zaxxer.hikari.HikariDataSource
+    # 驱动
+    driver-class-name: com.mysql.jdbc.Driver
+    # 用户名
+    username: sangoes
+    # 密码
+    password: Sangoes123456
+    # 连接
+    url: jdbc:mysql://mysql:3306/cloud?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai

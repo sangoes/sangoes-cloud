@@ -6,6 +6,8 @@ services:
     restart: always
     environment:
     - spring.profiles.active=dev
+    volumes:
+    - /usr/local/discovery/log:/discovery/log
     command: java -Xmx3000m -Djava.security.egd=file:/dev/./urandom -jar /app.jar
     ports:
     - 6121:6121

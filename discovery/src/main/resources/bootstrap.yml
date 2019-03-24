@@ -1,23 +1,11 @@
 # 注册中心配置
+server:
+  port: 6121
 
 spring:
   # 应用名称
   application:
     name: discovery
-  # 环境配置 dev开发环境 prod生产环境
-  profiles:
-    active: dev
-# 方式公开所有端点
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
----
-server:
-  port: 6121
-spring:
-  profiles: dev
   security:
     user:
       name: sangoes
@@ -26,33 +14,10 @@ spring:
     config:
       # 设置配置不能被发现
       enabled: false
+
 eureka:
   instance:
-    # 设置主机名 开发环境localhost 生产环境为docker-compose里设置的主机名
-    hostname: localhost
-    prefer-ip-address: true
-  client:
-    fetch-registry: false
-    register-with-eureka: false
-    serviceUrl:
-      defaultZone: http://sangoes:Sangoes123456@${eureka.instance.hostname}:${server.port}/eureka/
-  # 配置属性，但由于 Eureka 自我保护模式以及心跳周期长的原因，经常会遇到 Eureka Server 不剔除已关停的节点的问题
-  server:
-    eviction-interval-timer-in-ms: 4000
-    enable-self-preservation: false
-    renewal-percent-threshold: 0.9
----
-server:
-  port: 6121
-spring:
-  profiles: prod
-  security:
-    user:
-      name: sangoes
-      password: Sangoes123456
-eureka:
-  instance:
-    # 设置主机名 开发环境localhost 生产环境为docker-compose里设置的主机名discovery
+    # 设置主机名 生产环境为docker-compose里设置的主机名
     hostname: discovery
     prefer-ip-address: true
   client:
@@ -65,3 +30,10 @@ eureka:
     eviction-interval-timer-in-ms: 4000
     enable-self-preservation: false
     renewal-percent-threshold: 0.9
+
+# 方式公开所有端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

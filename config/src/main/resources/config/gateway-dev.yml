@@ -1,0 +1,21 @@
+# 网关配置
+spring:
+  cloud:
+    gateway:
+      locator:
+        enabled: true
+      # 代码生成模块
+      - id: codegen
+        uri: lb://codegen
+        predicates:
+        - Path=/gen/**
+
+security:
+  encode:
+    # 前端密码密钥，必须16位
+    key: 'thanks,pig4cloud'
+
+# 不校验验证码终端
+ignore:
+  clients:
+  - test

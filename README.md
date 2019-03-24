@@ -37,7 +37,7 @@ sangoes-cloud致力于分布式Cloud的基础框架,由spring-boot2.x和spring-c
         |
         gateway #网关中心
         |
-        auth #认证中心
+        auth #认证中心 6321
         |
         upms #用户权限模块   
 

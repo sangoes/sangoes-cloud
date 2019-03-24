@@ -1,0 +1,26 @@
+# 认证中心配置
+server:
+  port: 6321
+
+spring:
+  application:
+    name: auth
+  profiles:
+    active: dev
+  # 配置中心
+  cloud:
+    config:
+      fail-fast: true
+      name: ${spring.application.name}
+      profile: ${spring.profiles.active}
+      discovery:
+        enabled: true
+        service-id: config
+
+# 注册中心配置
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://sangoes:Sangoes123456@discovery:6121/eureka/

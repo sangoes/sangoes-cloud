@@ -42,6 +42,8 @@
         <!--docker-->
         <docker.url>http://127.0.0.1:4243</docker.url>
         <registry.url>127.0.0.1:5000</registry.url>
+        <!--sangoes-->
+        <sangoes-common.version>1.0</sangoes-common.version>
     </properties>
 
     <!--dependencyManagement-->
